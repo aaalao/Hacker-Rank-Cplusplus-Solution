@@ -1,2 +1,2 @@
 # Hacker-Rank-Cplusplus-Solution
-Hacker Rank C++ Solutions
+ This repo comprises C++ solutions to some of the problems in Hacker-Rank
