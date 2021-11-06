@@ -1,3 +1,4 @@
+//Hacker Rank Solution - Sales by Match
 int sockMerchant(int n, vector<int> ar) {
     vector<int> ar1 = ar;
     sort(ar1.begin(), ar1.end());
