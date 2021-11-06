@@ -1,0 +1,39 @@
+/* Hacker Rank Solution - Time Conversion
+ * Complete the 'timeConversion' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+string timeConversion(string s) {
+   string delim = ":",s1 = "PM", s2 = "AM", s3 = "", s4 = "", s5 = "",token = s.substr(0, s.find(delim)); 
+     if (s.find(s1) != string::npos)
+     {
+        s3 = s.substr(0, s.find(s1));
+        s4 = s3.substr(2);
+        if(stoi(token) < 12)
+        {
+          int i = 12 + stoi(token);
+          s5 = to_string(i) + s4;
+  
+        }
+        if(stoi(token) == 12)
+        {
+           s5 = s.substr(0, s.find(s1));
+        }
+        
+     }
+     else if (s.find(s2) != string::npos)   //AM
+     {
+        if(stoi(token) == 12)
+        {
+           s3 = s.substr(0, s.find(s2));
+           s4 = s3.substr(2);
+           s5 = "00" + s4;
+           return s5;
+        }
+        s5 = s.substr(0, s.find(s2));
+     }
+     
+     return s5;
+}
