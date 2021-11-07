@@ -13,29 +13,25 @@ int pageCount(int n, int p) {
     int fromBack = 0;
     int totalCount = 0;
     
-    if(p % 2 != 0)
-    {
-        fromFront = ((p-1)/2);
-    }
-    if( p % 2 ==0)
-    {
-        fromFront = p/2;
-    }
     if(n % 2 == 0 && p % 2 != 0)
     {
         fromBack = ((n - p + 1)/2);
+        fromFront = ((p-1)/2);
     }
     if( n % 2 ==0 && p % 2 ==0)
     {
         fromBack = ((n - p)/2);
+        fromFront = p/2;
     }
     if(n % 2 !=0 && p % 2 !=0)
     {
         fromBack = ((n - p)/2);
+        fromFront = ((p-1)/2);
     }
     if(n % 2 !=0 && p % 2 ==0)
     {
         fromBack = ((n - p - 1)/2);
+        fromFront = p/2;
     }  
     
     totalCount = (fromFront < fromBack) ? fromFront : fromBack;  
