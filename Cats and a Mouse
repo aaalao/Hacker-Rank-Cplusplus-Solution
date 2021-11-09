@@ -1,0 +1,29 @@
+/* Hacker Rank Solution - Cats and a Mouse
+*
+* Complete the catAndMouse function below.
+*
+*
+*/
+
+
+string catAndMouse(int x, int y, int z) {
+ int catAtoMouse = 0, catBtoMouse = 0;
+  string returnString = " ";
+  catAtoMouse = abs(x - z);
+  catBtoMouse = abs(y - z);
+  
+  if(catAtoMouse < catBtoMouse)
+  {
+    returnString = "Cat A";  
+  }
+  else if(catAtoMouse > catBtoMouse)
+  {
+    returnString = "Cat B";  
+  }
+  else if(catAtoMouse == catBtoMouse)
+  {
+    returnString = "Mouse C";  
+  }
+
+ return returnString;
+}
