@@ -1,0 +1,26 @@
+/* Hacker Rank Solution - Diagonal Difference
+ * Complete the 'diagonalDifference' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts 2D_INTEGER_ARRAY arr as parameter.
+ */
+
+int diagonalDifference(vector<vector<int>> arr) {
+    int priDiag =0, secDiag =0, diff =0, n = 0;
+    n = arr.size();
+    for (int i = 0; i < arr.size(); ++i)
+       for (int j = 0; j < arr.size(); ++j)
+       {
+           if(i == j)
+           {
+               priDiag += arr[i][j];
+           }
+           if(i == n -j -1)
+           {
+               secDiag += arr[i][j];
+           }
+       }
+       
+    diff = abs(priDiag - secDiag);
+    return diff;
+}
