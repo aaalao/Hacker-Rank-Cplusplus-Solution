@@ -1,0 +1,14 @@
+int pickingNumbers(vector<int> a) {
+    int maxLenSubArry1 = 0, maxLenSubArry2 = 0, countNum1 = 0, countNum2 = 0;
+    for(vector<int>::iterator i = a.begin(); i != a.end(); ++i)
+    {
+        countNum1 = count(a.begin(), a.end(), *i);
+        countNum2 = count(a.begin(), a.end(), ((*i) + 1));
+        maxLenSubArry2 = countNum1 + countNum2;
+        if(maxLenSubArry1 < maxLenSubArry2)
+        {
+           maxLenSubArry1 = maxLenSubArry2; 
+        }
+    }
+    return maxLenSubArry1;
+}
