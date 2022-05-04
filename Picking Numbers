@@ -1,4 +1,11 @@
-int pickingNumbers(vector<int> a) {
+/*
+ * Complete the 'pickingNumbers' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts INTEGER_ARRAY a as parameter.
+ */
+ 
+ int pickingNumbers(vector<int> a) {
     int maxLenSubArry1 = 0, maxLenSubArry2 = 0, countNum1 = 0, countNum2 = 0;
     for(vector<int>::iterator i = a.begin(); i != a.end(); ++i)
     {
